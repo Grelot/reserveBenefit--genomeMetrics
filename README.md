@@ -45,7 +45,7 @@ See https://www.sylabs.io/docs/ for instructions to install Singularity.
 #### Download the container
 
 ```
-singularity pull --name snpsdata_analysis.simg shub://Grelot/.................
+singularity pull --name snpsdata_analysis.simg shub://Grelot/reserveBenefit--snpsdata_analysis:snpsdata_analysis
 ```
 
 #### Run the container
@@ -97,4 +97,4 @@ Rscript snpsontothegenome/figure_cover_genome.R
 
 # SNPs laying/not laying in coding region
 
-............;
+............
