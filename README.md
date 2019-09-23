@@ -71,9 +71,9 @@ Let's define the wildcard `species` as any of these three species.
 
 #### Generate tables
 
-1. Split the genome into genome-windows of 400000bp. T
+1. Split the genome into genome-windows of 400000bp.
 2. Count number of SNPs located on each genome-windows.
-3. Count number of reads for each SNP for each individuals
+3. Count number of reads for each SNP for each individuals.
 
 INPUTS:
 * `species`.fasta : genome fasta file of `species`
@@ -87,7 +87,6 @@ OUTPUTS:
 bash snpsontothegenome/command.sh
 ```
 
-
 #### Build the figure
 
 ```
@@ -95,6 +94,14 @@ Rscript snpsontothegenome/figure_cover_genome.R
 ```
 
 
-# SNPs laying/not laying in coding region
+# Average distance between SNPs loci
+
+............
+
+# SNPs located/not in coding regions
+
+............
+
+# SNPs located/not in mitochondrial regions
 
 ............
