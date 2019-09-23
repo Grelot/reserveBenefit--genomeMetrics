@@ -1,6 +1,10 @@
-blablbla
+# Codes for the paper : "Genomic resources for Mediterranean fishes"
 
-Codes for the paper : "Genomic resources for Mediterranean fishes"
+
+<img align="right" src="reservebenefit.jpg">
+
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/3566)
+
 _______________________________________________________________________________
 
 
