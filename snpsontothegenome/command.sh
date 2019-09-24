@@ -54,3 +54,8 @@ paste <(tail -n +2 "$SPECIES".gdepth | awk '{print $1"\t"($2-1)"\t"$2}') <(tail 
 bedtools intersect -wa -wb \
     -a "$SPECIES"_genome.win.sort.bed \
     -b "$SPECIES".gdepth.bed > "$SPECIES"_meandepth.bed
+
+
+## get coordinates of SNPs
+
+awk '{ print $1"\t"$2 }' "$SPECIES"_pop.snps.bed > "$SPECIES"_coords.snps.bed
