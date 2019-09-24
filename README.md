@@ -82,6 +82,7 @@ INPUTS:
 OUTPUTS: 
 * `species`coverage.bed : a table with row as genome-windows of 400000bp of the genome of `species` with genome-coordinates (scaffold, start position, end position) and coverage (number of SNPs)
 * `species`meandepth.bed : a table with row as SNPs with genome-windows, coordinates (scaffold, start position, end position) and depth coverage (number of reads) for each SNP for each individuals
+* `species`coords.snps.bed : coordinates (scaffold, position) of SNPs onto genomes
 
 ```
 bash snpsontothegenome/command.sh
@@ -96,7 +97,13 @@ Rscript snpsontothegenome/figure_cover_genome.R
 
 # Average distance between SNPs loci
 
-............
+INPUTS:
+* `species`coords.snps.bed : coordinates (scaffold, position) of SNPs onto genomes
+
+
+```
+Rscript snpsontothegenome/average_distance_loci.R
+```
 
 # SNPs located/not in coding regions
 
