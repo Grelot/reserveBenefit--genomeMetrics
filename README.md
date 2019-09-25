@@ -76,13 +76,16 @@ Let's define the wildcard `species` as any of these three species.
 3. Count number of reads for each SNP for each individuals.
 
 INPUTS:
-* `species`.fasta : genome fasta file of `species`
-* `species`.vcf : SNPs from radseq data of `species`
+* `species`.fasta: genome fasta file of `species`
+* `species`.vcf: SNPs from radseq data of `species`
+* `species`.gff3: coordinates and related information of coding region annotation genome of `species`
 
 OUTPUTS: 
-* `species`coverage.bed : a table with row as genome-windows of 400000bp of the genome of `species` with genome-coordinates (scaffold, start position, end position) and coverage (number of SNPs)
-* `species`meandepth.bed : a table with row as SNPs with genome-windows, coordinates (scaffold, start position, end position) and depth coverage (number of reads) for each SNP for each individuals
-* `species`coords.snps.bed : coordinates (scaffold, position) of SNPs onto genomes
+* `species`coverage.bed: a table with row as genome-windows of 400000bp of the genome of `species` with genome-coordinates (scaffold, start position, end position) and coverage (number of SNPs)
+* `species`meandepth.bed: a table with row as SNPs with genome-windows, coordinates (scaffold, start position, end position) and depth coverage (number of reads) for each SNP for each individuals
+* `species`coords.snps.bed: coordinates (scaffold, position) of SNPs onto genomes
+* `species`coding.snps.bed: snps located on coding region
+
 
 ```
 bash snpsontothegenome/command.sh
@@ -93,7 +96,6 @@ bash snpsontothegenome/command.sh
 ```
 Rscript snpsontothegenome/figure_cover_genome.R
 ```
-
 
 # Average distance between SNPs loci
 
@@ -107,8 +109,14 @@ Rscript snpsontothegenome/average_distance_loci.R
 
 # SNPs located/not in coding regions
 
-............
+Simply count number of lines of the file `species`coding.snps.bed (each line is a snp located on a coding region)
+
 
 # SNPs located/not in mitochondrial regions
 
 ............
+
+
+# Results
+
+* [summary_snps.csv](results/summary_snps.csv): number of SNPs, average distance between consecutive loci (in bp) and number of SNPs located on a coding region for each `species`
