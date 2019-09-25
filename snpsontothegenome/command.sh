@@ -8,20 +8,32 @@
 #tar jxvf bedops_linux_x86_64-v2.4.35.tar.bz2 
 #sudo cp bin/* /usr/local/bin
 
+
+## load an environment with bedtools vcftools available
+SINGULARITY_SIMG="/media/superdisk/utils/conteneurs/snpsdata_analysis.simg"
+singularity shell --bind /media/superdisk:/media/superdisk $SINGULARITY_SIMG
+
+
 ## global variables
+### diplodus
 GENOME_FASTA="genomes/sar_genome_lgt6000.fasta"
 VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter3/diplodus/populations.snps.vcf"
 SPECIES="diplodus"
+GFF3="/media/superdisk/reservebenefit/working/annotation/DSARv1_annotation.gff3"
 
+### mullus
 GENOME_FASTA="genomes/mullus_genome_lgt6000.fasta"
 VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter4/mullus/populations.snps.vcf"
 SPECIES="mullus"
+GFF3="/media/superdisk/reservebenefit/working/annotation/MSURv1_annotation.gff3"
 
+### serranus
 GENOME_FASTA="genomes/serran_genome_lgt3000.fasta"
 VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter2/serran/populations.snps.vcf"
 SPECIES="serran"
+GFF3="/media/superdisk/reservebenefit/working/annotation/SCABv1_annotation.gff3"
 
-
+###############################################################################
 
 ## shuf 30 individuals subsample
 shuf -n 30 /media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/01-info_files/"$SPECIES"_population_map.txt | awk '{ print $1}' > "$SPECIES"_indv.txt
@@ -57,5 +69,23 @@ bedtools intersect -wa -wb \
 
 
 ## get coordinates of SNPs
-
 awk '{ print $1"\t"$2 }' "$SPECIES"_pop.snps.bed > "$SPECIES"_coords.snps.bed
+
+
+
+## get coordinates of SNPs
+awk '{ print $1"\t"$2"\t"$3 }' "$SPECIES"_pop.snps.bed > "$SPECIES"_coords.snps.bed
+## only exon coding region
+awk '$3 == "exon" { print $0 }' "$GFF3"
+
+## merge coding region which overlap
+bedtools merge -i "$GFF3" -d 400 > "$SPECIES"_coding.region.merged.bed
+## SNPs located on a coding region
+bedtools intersect -wb -a "$SPECIES"_coords.snps.bed -b "$SPECIES"_coding.region.merged.bed > "$SPECIES"_coding.snps.bed
+## number of SNPs
+wc -l "$SPECIES"_coords.snps.bed
+## number of coding regions (merged)
+wc -l "$SPECIES"_coding.region.merged.bed
+## number of SNPs on a coding region
+wc -l "$SPECIES"_coding.snps.bed
+
