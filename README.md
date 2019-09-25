@@ -120,3 +120,9 @@ Simply count number of lines of the file `species`coding.snps.bed (each line is 
 # Results
 
 * [summary_snps.csv](results/summary_snps.csv): number of SNPs, average distance between consecutive loci (in bp) and number of SNPs located on a coding region for each `species`
+
+species   |   number_snps  |   average_distance_bp   |   number_coding_snps
+----------|----------------|-------------------------|---------------------
+diplodus  |   39678        |   17552                 |   24644
+mullus    |  31009         |   14744                 |  21054
+serranus  |   47954        |   11912                 |   30617
