@@ -46,7 +46,7 @@ vcftools \
 OUT_GENO_LD="${SPECIES}".geno.ld
 vcftools \
   --vcf "${VCF_RM_FIS_LD}" \
-  --geno-r2
+  --geno-r2 \
   --out "${SPECIES}"
 VCF_RM_FIS_LD_RD="${SPECIES}".fisloc_rm.ld_5000.r2.recode.vcf
 perl filter_LDr2.pl "${OUT_GENO_LD}" "${VCF_RM_FIS_LD}" > "${VCF_RM_FIS_LD_RD}"
