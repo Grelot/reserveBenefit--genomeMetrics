@@ -32,6 +32,6 @@ mullus_dist_loci=average_distance_loci("mullus")
 serran_dist_loci=average_distance_loci("serran")
 
 ## average distance loci
-mean(diplodus_dist_loci)
-mean(mullus_dist_loci)
-mean(serran_dist_loci)
+mean(diplodus_dist_loci[,2])
+mean(mullus_dist_loci[,2])
+mean(serran_dist_loci[,2])

@@ -40,6 +40,8 @@ shuf -n 30 /media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/01-i
 vcftools --vcf "$VCF_INIT" --keep "$SPECIES"_indv.txt --recode --recode-INFO-all --out "$SPECIES"_subset30
 VCF_FILTERED="$SPECIES"_subset30.recode.vcf
 
+
+
 ## convert genome FASTA into BED format
 faidx --transform bed $GENOME_FASTA > "$SPECIES"_genome.bed
 sort -k 3 -nr "$SPECIES"_genome.bed > "$SPECIES"_genome.sort.bed
