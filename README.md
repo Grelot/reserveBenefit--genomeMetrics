@@ -66,6 +66,23 @@ Let's define the wildcard `species` as any of these three species.
 
 * SNPs data from radseq `.vcf`
 
+# Filtering SNPs
+
+Only one randomly selected SNP was retained per locus, and a locus was retained only if present in at least 85% of individuals. Individuals with an excess coverage depth (>1,000,000x) or >30% missing data were filtered out.
+
+#### Filtering steps
+1. Remove loci with inbreeding coefficient _Fis_ > 0.5 or < -0.5
+2. Keep all pairs of loci that are closer than 5000 bp
+3. Keep pairs of loci with linkage desequilibrum _r²_ > 0.8
+3. Keep SNPs with a minimum minor allele frequency (MAF) of 1%
+4. Remove loci that deviated significantly (p-value <0.01) from expected Hardy-Weinberg genotyping frequencies under random mating
+
+
+
+```
+cd filter_vcf
+bash filter_vcf.sh
+```
 
 # Mapping SNPs onto genome
 
@@ -75,12 +92,12 @@ Let's define the wildcard `species` as any of these three species.
 2. Count number of SNPs located on each genome-windows.
 3. Count number of reads for each SNP for each individuals.
 
-INPUTS:
+#### INPUTS:
 * `species`.fasta: genome fasta file of `species`
 * `species`.vcf: SNPs from radseq data of `species`
 * `species`.gff3: coordinates and related information of coding region annotation genome of `species`
 
-OUTPUTS: 
+#### OUTPUTS: 
 * `species`coverage.bed: a table with row as genome-windows of 400000bp of the genome of `species` with genome-coordinates (scaffold, start position, end position) and coverage (number of SNPs)
 * `species`meandepth.bed: a table with row as SNPs with genome-windows, coordinates (scaffold, start position, end position) and depth coverage (number of reads) for each SNP for each individuals
 * `species`coords.snps.bed: coordinates (scaffold, position) of SNPs onto genomes
@@ -99,7 +116,7 @@ Rscript snpsontothegenome/figure_cover_genome.R
 
 # Average distance between SNPs loci
 
-INPUTS:
+#### INPUTS:
 * `species`coords.snps.bed : coordinates (scaffold, position) of SNPs onto genomes
 
 
