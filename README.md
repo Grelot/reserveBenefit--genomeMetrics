@@ -77,6 +77,24 @@ Only one randomly selected SNP was retained per locus, and a locus was retained 
 3. Keep SNPs with a minimum minor allele frequency (MAF) of 1%
 4. Remove loci that deviated significantly (p-value <0.01) from expected Hardy-Weinberg genotyping frequencies under random mating
 
+#### INPUTS:
+
+* `species`.vcf: SNPs from radseq data of `species` 
+* `species`.sumstats.tsv: [Summary statistics for each population](http://catchenlab.life.illinois.edu/stacks/manual-v1/#pfiles)
+
+
+#### OUTPUTS: 
+
+* `species`.lmiss: number of missing individuals by locus table
+* `species`.imiss: number of missing loci by individual table
+* `species`.idepth : mean locus depth coverage by individual table
+* `species`.snps.fisloc_rm.vcf
+* `species`.fisloc_rm.ld_5000.log        
+* `species`.fisloc_rm.ld_5000.recode.vcf  
+* `species`.fisloc_rm.ld_5000.r2.recode.vcf                 
+* `species`.fisloc_rm.ld_5000.r2.maf001.recode.vcf
+* `species`.fisloc_rm.ld_5000.r2.maf001.hwe.recode.vcf: final filtered snps
+* `species`filtering_count_snps_report.tsv: number of SNPs at each filtering step
 
 
 ```
