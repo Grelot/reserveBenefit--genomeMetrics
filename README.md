@@ -87,7 +87,8 @@ Only one randomly selected SNP was retained per locus, and a locus was retained 
 
 * `species`.lmiss: number of missing individuals by locus table
 * `species`.imiss: number of missing loci by individual table
-* `species`.idepth : mean locus depth coverage by individual table
+* `species`.idepth: mean locus depth coverage by individual table
+* `species`.geno.ld: linkage desequilibrum _r² table
 * `species`.snps.fisloc_rm.vcf
 * `species`.fisloc_rm.ld_5000.log        
 * `species`.fisloc_rm.ld_5000.recode.vcf  
@@ -102,11 +103,11 @@ cd filter_vcf
 bash filter_vcf.sh
 ```
 
-# Mapping SNPs onto genome
+# Description of SNPs onto genome
 
 #### Generate tables
 
-1. Split the genome into genome-windows of 400000bp.
+1. Split the genome into genome-windows of 400 Kbp.
 2. Count number of SNPs located on each genome-windows.
 3. Count number of reads for each SNP for each individuals.
 
