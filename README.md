@@ -68,14 +68,21 @@ Let's define the wildcard `species` as any of these three species.
 
 # Filtering SNPs
 
-Only one randomly selected SNP was retained per locus, and a locus was retained only if present in at least 85% of individuals. Individuals with an excess coverage depth (>1,000,000x) or >30% missing data were filtered out.
+Only one randomly selected SNP was retained per locus, and a locus was retained only if present in at least 85% of individuals. Individuals with an excess coverage depth (>1,000,000x) or >30% missing data were filtered out. We kept loci with maximum observed heterozygosity=0.6.
 
-#### Filtering steps
+#### Filtering steps (IBD paper)
 1. Remove loci with inbreeding coefficient _Fis_ > 0.5 or < -0.5
 2. Keep all pairs of loci that are closer than 5000 bp
 3. Keep pairs of loci with linkage desequilibrum _r²_ > 0.8
+4. Keep SNPs with a minimum minor allele frequency (MAF) of 1%
+5. Remove loci that deviated significantly (p-value <0.01) from expected Hardy-Weinberg genotyping frequencies under random mating
+
+
+#### Filtering steps (genome paper)
+1. Keep all pairs of loci that are closer than 5000 bp
+2. Keep pairs of loci with linkage desequilibrum _r²_ > 0.8
 3. Keep SNPs with a minimum minor allele frequency (MAF) of 1%
-4. Remove loci that deviated significantly (p-value <0.01) from expected Hardy-Weinberg genotyping frequencies under random mating
+
 
 #### INPUTS:
 
