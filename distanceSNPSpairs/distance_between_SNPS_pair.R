@@ -22,9 +22,7 @@ scaffold_dist_df <- function(local_snppos) {
 test =read.table("07-post/mullus_big_scaffolds_snps_pos.tsv")
 #test =read.table("07-post/mullus_snps_pos.tsv")
 names(test)=c("scaffold","position")
-#test2=test
-#test2$scaffold=rep("coucou",length(test2$scaffold))
-#test=rbind(test,test2)
+
 ###############################################################################
 ## for each scaffold get pair of SNPS and distance between them
 
