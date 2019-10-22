@@ -17,19 +17,25 @@ singularity shell --bind /media/superdisk:/media/superdisk $SINGULARITY_SIMG
 ## global variables
 ### diplodus
 GENOME_FASTA="genomes/sar_genome_lgt6000.fasta"
-VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter3/diplodus/populations.snps.vcf"
+#VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter3/diplodus/populations.snps.vcf"
+VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/analysis/snpontothegenome/genome_paper/diplodus.ld_5000.r2.maf001.recode.vcf"
 SPECIES="diplodus"
 GFF3="/media/superdisk/reservebenefit/working/annotation/DSARv1_annotation.gff3"
 
 ### mullus
 GENOME_FASTA="genomes/mullus_genome_lgt6000.fasta"
-VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter4/mullus/populations.snps.vcf"
+#VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter4/mullus/populations.snps.vcf"
+VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/analysis/snpontothegenome/genome_paper/mullus.ld_5000.r2.maf001.recode.vcf"
+
 SPECIES="mullus"
 GFF3="/media/superdisk/reservebenefit/working/annotation/MSURv1_annotation.gff3"
 
 ### serranus
 GENOME_FASTA="genomes/serran_genome_lgt3000.fasta"
-VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter2/serran/populations.snps.vcf"
+#VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter2/serran/populations.snps.vcf"
+VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/analysis/snpontothegenome/genome_paper/serran.ld_5000.r2.maf001.recode.vcf"
+
+
 SPECIES="serran"
 GFF3="/media/superdisk/reservebenefit/working/annotation/SCABv1_annotation.gff3"
 
