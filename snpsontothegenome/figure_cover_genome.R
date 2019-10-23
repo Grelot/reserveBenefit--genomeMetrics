@@ -56,14 +56,22 @@ cover_genome_figures <- function(species_name,titre1,titre2) {
   ## filter outliers variant with very high coverage
   dv.wing.cutoff=dv.wing[which(dv.wing$value < 200),]
 
+  ## write tables
+  write.table(dd.wg, paste(species_name,"nb_snps.tsv",sep="_"),col.names=T,row.names=F,sep="\t")
+  write.table(dm.winga, paste(species_name,"depth_coverage.tsv",sep="_"),col.names=T,row.names=F,sep="\t")
+
   ## plot figures
   p_numbervar=ggplot() +
-    geom_rect(data=rectangles.toprint, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax), 
+    geom_rect(data=rectangles.toprint, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax-50), 
               fill='gray80', alpha=0.8)+
     geom_line(data=dd.wg,aes(x=windows,y=cover),size=0.6,color="black")+
-    xlab("")+ylab("Number of variants")+ggtitle(titre1)+ylim(0, 100)+
+    xlab("")+ylab("Number of variants")+ggtitle(titre1)+ylim(0, 50)+
     scale_x_continuous( labels=function(x) round(x/2.5,digits=0) )+
-    theme_classic()
+    theme_classic()+
+    theme(
+      plot.title = element_text(size = 36),
+      axis.title = element_text(size = 32),
+      axis.text = element_text(size = 24))
   p_depthcov=ggplot() +
     geom_rect(data=rectangles.toprint, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax+100), 
               fill='gray80', alpha=0.8)+  
@@ -73,16 +81,15 @@ cover_genome_figures <- function(species_name,titre1,titre2) {
     scale_x_continuous( labels=function(x) round(x/2.5,digits=0))+
     theme_classic()+
     theme(
-      plot.title = element_text(size = 24),
-      axis.title = element_text(size = 20),
-      axis.text = element_text(size = 18))
+      plot.title = element_text(size = 36),
+      axis.title = element_text(size = 32),
+      axis.text = element_text(size = 24))
   return(list(p_numbervar,p_depthcov))
 }
 
 diplodusplots=cover_genome_figures("diplodus","(A)","(B)")
 mullusplots=cover_genome_figures("mullus","(C)","(D)")
 serranplots=cover_genome_figures("serran","(E)","(F)")
-
 
 
 pdf("depthcoverage_numberofvar.pdf",width=14,height=7,paper='special')
