@@ -32,6 +32,46 @@ mullus_dist_loci=average_distance_loci("mullus")
 serran_dist_loci=average_distance_loci("serran")
 
 ## average distance loci
-mean(diplodus_dist_loci[,2])
-mean(mullus_dist_loci[,2])
+mean_v=c(
+mean(diplodus_dist_loci[,2]),
+mean(mullus_dist_loci[,2]),
 mean(serran_dist_loci[,2])
+)
+
+
+## median distance loci
+media_v=c(
+median(diplodus_dist_loci[,2]),
+median(mullus_dist_loci[,2]),
+median(serran_dist_loci[,2])
+)
+
+## sd distance loci
+sd_v=c(
+sd(diplodus_dist_loci[,2]),
+sd(mullus_dist_loci[,2]),
+sd(serran_dist_loci[,2])
+)
+
+## max distance loci
+max_v=c(
+max(diplodus_dist_loci[,2]),
+max(mullus_dist_loci[,2]),
+max(serran_dist_loci[,2])
+)
+
+## min distance loci
+min_v=c(
+min(diplodus_dist_loci[,2]),
+min(mullus_dist_loci[,2]),
+min(serran_dist_loci[,2])
+)
+
+distance_loci=matrix(c(mean_v,media_v,sd_v,max_v,min_v),nrow=3)
+row.names(distance_loci)=c("diplodus","mullus","serran")
+colnames(distance_loci)=c("mean","median","sd","max","min")
+
+
+###############################################################################
+## write csv
+write.csv(distance_loci)
