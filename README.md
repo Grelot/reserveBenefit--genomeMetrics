@@ -164,7 +164,8 @@ Simply count number of lines of the file `species`coding.snps.bed (each line is 
 
 * [distance_loci.csv](results/distance_loci.csv) : mean, median and sd distance between consecutive loci
 
-         |  mean            | median|   sd             | maw     | min
+
+species |  mean            | median|   sd             | max     | min
 ---------|------------------|-------|------------------|---------|----
 diplodus | 35388.9078430345 | 23751 | 34996.9143024498 | 459616  |5000
 mullus   | 30716.8684498214 | 20930 | 29189.8335674228 | 384550  |5002
