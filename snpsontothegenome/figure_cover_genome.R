@@ -65,7 +65,7 @@ cover_genome_figures <- function(species_name,titre1,titre2) {
     geom_rect(data=rectangles.toprint, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax-50), 
               fill='gray80', alpha=0.8)+
     geom_line(data=dd.wg,aes(x=windows,y=cover),size=0.6,color="black")+
-    xlab("")+ylab("Number of variants")+ggtitle(titre1)+ylim(0, 50)+
+    xlab("")+ylab("Number of SNPs")+ggtitle(titre1)+ylim(0, 50)+
     scale_x_continuous( labels=function(x) round(x/2.5,digits=0) )+
     theme_classic()+
     theme(
@@ -77,7 +77,7 @@ cover_genome_figures <- function(species_name,titre1,titre2) {
               fill='gray80', alpha=0.8)+  
     geom_point(data=dv.wing.cutoff,aes(x=windows,y=value),size=0.05,alpha=0.3,color="royalblue")+
     geom_line(data=dm.winga,aes(x=windows,y=meanDepth),size=0.6,color="black")+
-    xlab("Base position (Mb)")+ylab("Depth coverage")+ggtitle(titre2)+ylim(0, 200)+
+    xlab("Base position (Mb)")+ylab("Coverage")+ggtitle(titre2)+ylim(0, 200)+
     scale_x_continuous( labels=function(x) round(x/2.5,digits=0))+
     theme_classic()+
     theme(

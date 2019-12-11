@@ -18,5 +18,5 @@ GFF3="/media/superdisk/reservebenefit/working/annotation/DSARv1_annotation.gff3"
 ## convert into bed
 awk '{ print $1"\t"$2"\t"$2+1 }' selected_loci_diplodus.tsv > selected_loci_diplodus.bed
 
-## get coding region for  SNPs
+## get coding region for SNPs
 bedtools intersect -wb -a selected_loci_"$SPECIES".bed -b "$GFF3" > "$SPECIES"_coding.snps.bed

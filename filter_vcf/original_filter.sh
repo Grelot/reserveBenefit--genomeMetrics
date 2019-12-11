@@ -169,7 +169,6 @@ vcftools \
   --recode
 
 
-
 #filter out loci with a min MAF below 0.05
 vcftools \
   --vcf $WORK/Pierre/stacks2.2/DIPLODUS_iter3/07-filtering/FisLoc_removed_LD5000r2.recode.vcf \
