@@ -14,9 +14,16 @@ GENOME_FASTA="genomes/sar_genome_lgt6000.fasta"
 SPECIES="diplodus"
 GFF3="/media/superdisk/reservebenefit/working/annotation/DSARv1_annotation.gff3"
 
+### mullus
+GENOME_FASTA="genomes/mullus_genome_lgt6000.fasta"
+SPECIES="mullus"
+GFF3="/media/superdisk/reservebenefit/working/annotation/MSURv1_annotation.gff3"
+
+
+
 
 ## convert into bed
-awk '{ print $1"\t"$2"\t"$2+1 }' selected_loci_diplodus.tsv > selected_loci_diplodus.bed
+awk '{ print $1"\t"$2"\t"$2+1 }' selected_loci_"$SPECIES".tsv > selected_loci_"$SPECIES".bed
 
 ## get coding region for SNPs
 bedtools intersect -wb -a selected_loci_"$SPECIES".bed -b "$GFF3" > "$SPECIES"_coding.snps.bed
