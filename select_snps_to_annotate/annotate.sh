@@ -21,7 +21,6 @@ GFF3="/media/superdisk/reservebenefit/working/annotation/MSURv1_annotation.gff3"
 
 
 
-
 ## convert into bed
 awk '{ print $1"\t"$2"\t"$2+1 }' selected_loci_"$SPECIES".tsv > selected_loci_"$SPECIES".bed
 
