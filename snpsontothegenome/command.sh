@@ -8,6 +8,8 @@
 #tar jxvf bedops_linux_x86_64-v2.4.35.tar.bz2 
 #sudo cp bin/* /usr/local/bin
 
+## sur servermarbec: /media/superdisk/reservebenefit/working/rerun1/analysis
+
 
 ## load an environment with bedtools vcftools available
 SINGULARITY_SIMG="/media/superdisk/utils/conteneurs/snpsdata_analysis.simg"
@@ -26,7 +28,6 @@ GFF3="/media/superdisk/reservebenefit/working/annotation/DSARv1_annotation.gff3"
 GENOME_FASTA="genomes/mullus_genome_lgt6000.fasta"
 #VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter4/mullus/populations.snps.vcf"
 VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/analysis/snpontothegenome/genome_paper/mullus.ld_5000.r2.maf001.recode.vcf"
-
 SPECIES="mullus"
 GFF3="/media/superdisk/reservebenefit/working/annotation/MSURv1_annotation.gff3"
 
@@ -34,8 +35,6 @@ GFF3="/media/superdisk/reservebenefit/working/annotation/MSURv1_annotation.gff3"
 GENOME_FASTA="genomes/serran_genome_lgt3000.fasta"
 #VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/snakemake_stacks2/06-populations/iter2/serran/populations.snps.vcf"
 VCF_INIT="/media/superdisk/reservebenefit/working/rerun1/analysis/snpontothegenome/genome_paper/serran.ld_5000.r2.maf001.recode.vcf"
-
-
 SPECIES="serran"
 GFF3="/media/superdisk/reservebenefit/working/annotation/SCABv1_annotation.gff3"
 
@@ -97,3 +96,10 @@ wc -l "$SPECIES"_coding.region.merged.bed
 ## number of SNPs on a coding region
 wc -l "$SPECIES"_coding.snps.bed
 
+## get SNPs located on mitochondrion
+awk '{ print $1"\t"$2"\t"$3 }' "$SPECIES"_coding.snps.bed > "$SPECIES"_coding.snps.only.bed
+bedtools intersect -wb -a "$SPECIES"_coding.snps.only.bed -b "$GFF3" > "$SPECIES"_coding.snps.ann.bed
+grep "mitochondrial" "$SPECIES"_coding.snps.ann.bed > "$SPECIES"_coding.snps.ann.mitochondrial.bed
+
+## number of mitochondrial SNPs
+wc -l "$SPECIES"_coding.snps.ann.mitochondrial.bed
