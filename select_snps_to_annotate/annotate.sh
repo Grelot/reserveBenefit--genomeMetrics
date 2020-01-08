@@ -26,3 +26,6 @@ awk '{ print $1"\t"$2"\t"$2+1 }' selected_loci_"$SPECIES".tsv > selected_loci_"$
 
 ## get coding region for SNPs
 bedtools intersect -wb -a selected_loci_"$SPECIES".bed -b "$GFF3" > "$SPECIES"_coding.snps.bed
+
+## format annotation table (get genome sequences with 99*2 flanking region)
+python3 get_flanking_sequence_from_vcf.py -g "$GENOME_FASTA" -t "$SPECIES"_coding.snps.bed -f 99 > "$SPECIES"_coding.format.snps.csv
