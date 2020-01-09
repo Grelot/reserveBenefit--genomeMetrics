@@ -19,6 +19,13 @@ GENOME_FASTA="genomes/mullus_genome_lgt6000.fasta"
 SPECIES="mullus"
 GFF3="/media/superdisk/reservebenefit/working/annotation/MSURv1_annotation.gff3"
 
+### serran
+GENOME_FASTA="genomes/serran_genome_lgt3000.fasta"
+SPECIES="serran"
+GFF3="/media/superdisk/reservebenefit/working/annotation/SCABv1_annotation.gff3"
+
+
+## cd /media/superdisk/reservebenefit/working/rerun1/analysis/select_snps
 
 
 ## convert into bed
