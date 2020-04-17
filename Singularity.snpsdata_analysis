@@ -90,4 +90,10 @@ Include: bash vim less man-db apt-utils tzdata
 	cd $HOME
 	wget https://github.com/bedops/bedops/releases/download/v2.4.35/bedops_linux_x86_64-v2.4.35.tar.bz2
 	tar jxvf bedops_linux_x86_64-v2.4.35.tar.bz2
-	mv bin/* /usr/local/bin
+	mv bin/* /usr/local/bin/
+
+	## sra-toolkit
+	cd $HOME
+	wget "ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz"
+	tar -xzf sratoolkit.current-centos_linux64.tar.gz	
+	mv sratoolkit.2.10.5-centos_linux64/bin/* /usr/local/bin/
