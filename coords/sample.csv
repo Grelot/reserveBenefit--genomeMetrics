@@ -1,0 +1,91 @@
+species;label;date;latitude;longitude;location;depth
+Mullus surmuletus;1;10.07.2017;41.964;3.228;Aiguafreda;23.3
+Mullus surmuletus;2;12.07.2017;42.469;3.163;Banyuls;12.4
+Mullus surmuletus;3;12.07.2017;42.469;3.163;Banyuls;11.7
+Mullus surmuletus;4;12.07.2017;42.472;3.157;Banyuls;11.5
+Mullus surmuletus;5;12.07.2017;42.472;3.157;Banyuls;10.2
+Mullus surmuletus;6;12.07.2017;42.472;3.157;Banyuls;10.2
+Mullus surmuletus;7;10.10.2017;37.554;-0.917;Cabo del Agua;32.4
+Mullus surmuletus;8;27.09.2017;42.285;3.297;Cadaques;16.8
+Mullus surmuletus;9;27.09.2017;42.285;3.297;Cadaques;17
+Mullus surmuletus;10;25.09.2017;39.605;3.413;Cala Bona;21
+Mullus surmuletus;11;05.10.2017;39.638;3.45;Cala Bona;28
+Mullus surmuletus;12;13.11.2017;36.892;-1.935;Cala de San Pedro;63
+Mullus surmuletus;13;19.03.2018;39.707;3.468;Cala Ratjada;18.7
+Mullus surmuletus;14;06.09.2017;42.323;3.31;Cap de Creus;13.2
+Mullus surmuletus;15;18.08.2017;37.079;-1.842;Castillo Macenas;32.4
+Mullus surmuletus;16;05.10.2017;39.325;2.97;Colònia Sant Jordi;22
+Mullus surmuletus;17;04.12.2017;39.28;2.945;Colònia Sant Jordi;56
+Mullus surmuletus;18;26.10.2017;40.034;4.187;Fornells;27.7
+Mullus surmuletus;19;20.04.2018;40.073;4.08;Illa Bledes;9.8
+Mullus surmuletus;20;28.05.2017;39.829;0.708;Islas Columbretes;94
+Mullus surmuletus;21;04.06.2017;41.202;2.142;L'Hospitalet;693
+Mullus surmuletus;22;09.08.2017;36.864;-1.98;Las Negras;55.8
+Mullus surmuletus;23;06.09.2017;38.22;-0.459;Monte Faro;21.5
+Mullus surmuletus;24;17.10.2017;39.88;3.16;Pollença;26
+Mullus surmuletus;25;26.06.2017;42.521;3.148;Port Vendres;10
+Mullus surmuletus;26;31.08.2017;37.031;-1.867;Río Alias;36
+Mullus surmuletus;27;05.09.2017;38.181;-0.444;Santa Pola;21
+Mullus surmuletus;28;01.12.2017;38.144;-0.613;Santa Pola;13.5
+Mullus surmuletus;29;23.05.2017;39.276;-0.137;Sueca;64.5
+Mullus surmuletus;30;31.05.2017;41.027;1.377;Tarragona;129.8
+Diplodus sargus;1;12.07.2017;42.514;3.138;Banyuls;19.5
+Diplodus sargus;2;12.07.2017;42.515;3.139;Banyuls;24.5
+Diplodus sargus;3;12.07.2017;42.515;3.139;Banyuls;24.5
+Diplodus sargus;4;12.07.2017;42.515;3.139;Banyuls;24.5
+Diplodus sargus;5;06.09.2017;42.49;3.135;Banyuls;21.7
+Diplodus sargus;6;28.04.2018;39.756;3.25;Betlem;23.8
+Diplodus sargus;7;20.10.2017;39.652;3.474;Cala Ratjada;39.7
+Diplodus sargus;8;27.10.2017;39.776;3.414;Cala Ratjada;32.5
+Diplodus sargus;9;20.11.2017;39.764;3.405;Cala Ratjada;32.2
+Diplodus sargus;10;05.12.2017;39.786;3.44;Cala Ratjada;36.5
+Diplodus sargus;11;26.09.2017;39.797;3.201;Can Picafort;27
+Diplodus sargus;12;30.03.2018;39.756;3.222;Can Picafort;14.2
+Diplodus sargus;13;25.10.2017;43.277;3.517;Cap d'Agde;28.4
+Diplodus sargus;14;25.10.2017;43.277;3.517;Cap d'Agde;28.6
+Diplodus sargus;15;06.07.2017;42.323;3.31;Cap de Creus;15.4
+Diplodus sargus;16;06.07.2017;42.323;3.31;Cap de Creus;15.4
+Diplodus sargus;17;06.07.2017;42.323;3.31;Cap de Creus;15.6
+Diplodus sargus;18;08.08.2017;39.894;0.687;Columbretes;7
+Diplodus sargus;19;09.08.2017;39.889;0.667;Columbretes;3
+Diplodus sargus;20;10.08.2017;39.894;0.687;Columbretes;7
+Diplodus sargus;21;13.09.2017;38.281;-0.505;El Altet;8
+Diplodus sargus;22;10.10.2017;37.55;-0.981;Escombreras;59.4
+Diplodus sargus;23;20.10.2017;37.753;-0.744;La Manga;1.8
+Diplodus sargus;24;02.11.2017;37.702;-0.752;La Manga;3.6
+Diplodus sargus;25;26.07.2017;41.801;3.071;Palamos;17.1
+Diplodus sargus;26;26.07.2017;41.801;3.071;Palamos;17.1
+Diplodus sargus;27;30.08.2017;41.857;3.149;Palamos;23.4
+Diplodus sargus;28;27.07.2017;42.239;3.181;Roses;21.4
+Diplodus sargus;29;17.10.2017;41.113;1.302;Tarragone;14.2
+Diplodus sargus;30;18.09.2017;37.931;-0.672;Torrevieja;36
+Serranus cabrilla;1;17.10.2017;39.874;3.259;Alcudia;56
+Serranus cabrilla;2;07.09.2017;38.303;-0.464;Alicante;21.5
+Serranus cabrilla;3;04.09.2017;38.161;-0.528;Alicante;18
+Serranus cabrilla;4;04.09.2017;38.161;-0.528;Alicante;18
+Serranus cabrilla;5;04.09.2017;38.161;-0.528;Alicante;18
+Serranus cabrilla;6;21.09.2017;38.317;-0.447;Alicante;25
+Serranus cabrilla;7;12.07.2017;42.479;3.148;Banyuls;17.8
+Serranus cabrilla;8;12.07.2017;42.493;3.134;Banyuls;17
+Serranus cabrilla;9;16.10.2017;37.583;-0.794;Cabo Negro;21.6
+Serranus cabrilla;10;23.10.2017;37.585;-0.782;Cabo Negro;21.6
+Serranus cabrilla;11;15.11.2017;36.892;-1.935;Cala de San Pedro;63
+Serranus cabrilla;12;27.10.2017;39.824;3.471;Cala Ratjada;53.1
+Serranus cabrilla;13;02.11.2017;39.65;3.607;Cala Ratjada;76.6
+Serranus cabrilla;14;20.11.2017;39.804;3.38;Cala Ratjada;44.6
+Serranus cabrilla;15;11.10.2017;37.591;-0.725;Calblanque;25.2
+Serranus cabrilla;16;20.07.2017;40.076;4.085;Cap de Cavalleria;18
+Serranus cabrilla;17;31.08.2017;37.184;-1.807;Garrucha;27
+Serranus cabrilla;18;31.08.2017;37.197;-1.766;Garrucha;72
+Serranus cabrilla;19;05.10.2017;39.792;3.734;Holanda;116
+Serranus cabrilla;20;05.09.2017;38.172;-0.448;Isla de Tabarca;19
+Serranus cabrilla;21;05.09.2017;38.172;-0.448;Isla de Tabarca;19
+Serranus cabrilla;22;05.08.2017;39.852;0.682;Islas Columbretes;39.1
+Serranus cabrilla;23;08.08.2017;39.905;0.632;La Calç;47.3
+Serranus cabrilla;24;13.09.2017;39.831;4.345;Maó;65.8
+Serranus cabrilla;25;01.06.2017;41.816;3.152;Palamos;73
+Serranus cabrilla;26;17.08.2017;36.795;-2.285;Rambla Morales;34.2
+Serranus cabrilla;27;08.09.2017;39.825;3.251;S'Aucanada;39
+Serranus cabrilla;28;16.03.2018;39.881;3.406;Sa Muntanyota;64
+Serranus cabrilla;29;04.12.2017;39.28;2.945;Santanyí;56
+Serranus cabrilla;30;04.06.2017;41.148;1.795;Vilanova y la Geltru;55.75
