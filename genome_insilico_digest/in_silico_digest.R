@@ -14,22 +14,20 @@ library(SimRAD)
 #Such an estimation would be before/without filtering by physical distance (5kbp) to reduce linkage.
 #If we want to compare our in silico estimate with our final empirical number of markers/SNPs, we would also need to also filter by physical distance in silico.
 
-#simulate the genome
-simseq <- sim.DNAseq(size=100000000, GCfreq=0.40)
-#Define the restriction enzyme recognition pattern:
-#PstI#
-cs_5p1 <- "G"
-cs_3p1 <- "AATTC"
-
-#digestion of the "simseq" genome:
-simseq.dig <- insilico.digest(simseq, cs_5p1, cs_3p1, verbose=TRUE)
 
 
 ##SbfI
 cs_5p1 <- "CCTGCA"
-cs_3p1 <- "GG
+cs_3p1 <- "GG"
 
-## 
+## diplodus Sargus
+fasFile <- "./genome_insilico_digest/sar_genome_lgt6000.fasta"
+## mullus Surmuletus
+fasFile <- "./genome_insilico_digest/mullus_genome_lgt6000.fasta"
+## serranus Cabrilla
+fasFile <- "./genome_insilico_digest/serran_genome_lgt3000.fasta"
 
-genomFas <- ref.DNAseq(FASTA.file=i, subselect.contigs =FALSE)
-simseq.dig <- insilico.digest(simseq, cs_5p1, cs_3p1, verbose=TRUE)
+
+## in silico digest RAD single enzyme
+genomFas <- ref.DNAseq(FASTA.file=fasFile, subselect.contigs =FALSE)
+simseq.dig <- insilico.digest(genomFas, cs_5p1, cs_3p1, verbose=TRUE)
