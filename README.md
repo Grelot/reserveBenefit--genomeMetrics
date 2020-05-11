@@ -188,5 +188,5 @@ diplodus  |   20074        |   35389                 |   11978               | 1
 mullus    |   15710        |   30717                 |   10304               | 178
 serranus  |   21101        |   28240                 |   13107               | 226
 
-
+More detail about coding snps location (CDS, exon, intron) in this table: [count_snps_annotation.csv](results/count_snps_annotation.csv)  
 
