@@ -1,0 +1,4 @@
+species,raw,gene,exon,intron,cds
+diplodus,20074 diplodus_coords.snps.bed,11947,3138,8809,3138
+mullus,15710 mullus_coords.snps.bed,10277,2908,7369,2908
+serran,21101 serran_coords.snps.bed,13067,3589,9478,3589
